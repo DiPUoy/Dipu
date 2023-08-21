@@ -1,4 +1,5 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,8 @@ body {
     /* font-family: 'Roboto', sans-serif; */
     overflow-x: hidden;
 }
+
+
 
 nav {
     width: 100%;
@@ -37,33 +40,40 @@ nav ul li {
     list-style: none;
     font-weight: 400;
 }
-nav ul a:hover{
+
+nav ul a:hover {
     color: rgb(0, 119, 255);
 }
+
 nav ul a {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
-nav ul div{
+
+nav ul .loginx {
     border-left: 2px solid white;
     padding-left: 20px;
 }
-.navigaton{
+
+.navigaton {
     font-size: 20px;
 }
-#home{
+
+#home {
     height: 88vh;
     display: flex;
     justify-content: space-around;
 }
-#home .left{
+
+#home .left {
     /* width: 0%; */
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#home .left .image{
+
+#home .left .image {
     background-image: url(dipu.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -72,16 +82,19 @@ nav ul div{
     height: 300px;
     border-radius: 200px;
 }
-#home .right{
+
+#home .right {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#element{
+
+#element {
     color: purple;
 }
-.btn button{
+
+.btn button {
     width: 184px;
     height: 51px;
     background-color: rgb(131, 131, 255);
@@ -95,23 +108,30 @@ nav ul div{
     font-family: 'Poppins', sans-serif;
 
 }
-.follow{
+
+.follow {
     text-align: center;
     font-size: 10px;
     margin-top: 20px;
 }
-.follow > div{
+
+.follow>div {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-.facebook,.insta{
+
+.facebook,
+.insta {
     position: relative;
 }
-.facebook:hover .popup ,.insta:hover .popup{
+
+.facebook:hover .popup,
+.insta:hover .popup {
     display: block;
 }
-.popup{
+
+.popup {
     display: none;
     position: absolute;
     background-color: lavender;
@@ -120,32 +140,39 @@ nav ul div{
     left: -10px;
     user-select: none;
 }
+
 .follow i {
     font-size: 20px;
     margin: 10px 10px;
     cursor: pointer;
 }
-#contract{
+
+#contract {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#contract h1{
+
+#contract h1 {
     width: 150px;
     position: relative;
     margin-bottom: 20px;
-    
+    z-index: 2 !important;
+
 }
-#contract .styling-h1{
-    width: 120px;
+
+#contract .styling-h1 {
+    width: 131px;
     height: 25px;
     background-color: rgba(255, 0, 43, 0.692);
     position: absolute;
     top: 18px;
-    right: -10px;
+    right: 2px;
+    z-index: -1;
 }
-#contract form{
+
+#contract form {
     border: 1px solid rgba(129, 209, 255, 0.678);
     width: 550px;
     background-color: rgb(255, 255, 255);
@@ -157,22 +184,24 @@ nav ul div{
     align-items: center;
 }
 
-.input-text{
-  
+.input-text {
+
     position: relative;
     margin-bottom: 20px;
 }
-.input-text input{
+
+.input-text input {
     width: 450px;
     height: 50px;
-    padding:0 20px;
-    font-family: 'poppins' , sans-serif;
+    padding: 0 20px;
+    font-family: 'poppins', sans-serif;
     font-size: 20px;
     outline: none;
     border: 1px solid rgb(83, 83, 255);
     color: rgb(83, 83, 255);
 }
-.input-text label{
+
+.input-text label {
     position: absolute;
     top: 15px;
     left: 20px;
@@ -180,42 +209,98 @@ nav ul div{
     transition: .5s;
     cursor: text;
 }
-.input-text #input-1:focus ~ label,.input-text #input-2:focus ~ label{
+
+.input-text #input-1:focus~label,
+.input-text #input-2:focus~label {
     top: -13px;
     background-color: rgb(255, 255, 255) !important;
 }
-#submit{
+
+#submit {
     width: 500px;
     height: 50px;
-    padding:0 20px;
-    font-family: 'poppins' , sans-serif;
+    padding: 0 20px;
+    font-family: 'poppins', sans-serif;
     font-size: 20px;
     outline: none;
     border: 1px solid rgb(249, 249, 255);
     color: rgb(136, 136, 255);
     cursor: pointer;
 }
-::-webkit-file-upload-button{
+
+::-webkit-file-upload-button {
     background-color: rgb(85, 85, 255);
     color: white;
     padding: 10px;
     border-radius: 5px;
-    font-size: 15px;cursor: pointer;
+    font-size: 15px;
+    cursor: pointer;
     outline: none;
     border: none;
     font-family: 'poppins', sans-serif !important;
 }
-.file input{
+
+.file input {
     font-family: 'poppins', sans-serif;
-    
+
 }
-.file{
+
+.file {
     justify-content: center;
     align-items: center !important;
     background-color: lavender;
     height: 50px;
     width: 500px;
 }
+
+.backdropfilter {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff99;
+    position: fixed;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    top: 0;
+}
+
+.login-form {
+    z-index: 4;
+    margin: auto;
+    background-color: #ff8787;
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+#login:checked~.backdropfilter {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: static;
+}
+
+
+
+
+
+
+
+
+
 @media (max-width:900px) {
     nav ul {
         position: fixed;
@@ -229,47 +314,60 @@ nav ul div{
         transition: 1s;
         overflow: hidden;
     }
-    nav ul li{
+
+    nav ul li {
         margin-top: 20px;
     }
-    #home{
+
+    #home {
         display: block;
         padding-top: 20px;
     }
-    .right .btn{
+
+    .right .btn {
         width: 200px;
         margin-top: 50px;
     }
-    .left .image{
+
+    .left .image {
         width: 240px !important;
         height: 240px !important;
         margin-top: 100px;
     }
-    .left{
+
+    .left {
         height: 50% !important;
     }
-    .right{
+
+    .right {
         height: 40%;
+        margin-top: -10%;
     }
-    .left h1{
+
+    .left h1 {
         width: 200px;
     }
-    #nav:checked ~ ul{
+
+    #nav:checked~ul {
         right: 0px;
         width: 250px;
         padding: 30px;
     }
-    nav ul div{
+
+    nav ul .loginx {
         border: none;
         margin-top: 20px;
     }
-    #contract{
-        margin-top:200px;
+
+    #contract {
+        margin-top: 250px;
         background-color: rgb(255, 255, 255);
         display: block;
+
     }
-    form{
-        width: 90% !important;
+
+    form {
+        width: 375px !important;
         margin: auto;
         padding: 10px;
         justify-content: normal;
@@ -277,19 +375,37 @@ nav ul div{
         border-top: 3px solid lavender !important;
         border-bottom: 3px solid lavender !important;
     }
-    #contract div h1{
-     margin: auto;
-     margin-bottom: 20px;
+
+    #contract div h1 {
+        margin: auto;
+        margin-bottom: 20px;
     }
-    form input{
+
+    form input {
         width: 85% !important;
     }
-    .file{
+
+    .file {
         width: 90%;
     }
+
+    .login-form {
+        width: 100%;
+        border-radius: 0;
+    }
 }
-@media (min-width:900px){
-    nav .r-h{
+
+@media (min-width:900px) {
+    nav .r-h {
         display: none;
+    }
+
+
+
+}
+@media (max-width:500px){
+
+    form {
+        width: 90% !important;
     }
 }

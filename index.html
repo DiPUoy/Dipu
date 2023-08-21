@@ -13,7 +13,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
-<body>
+<body id="body">
+
   <nav>
     <div class="left">
       <h1>Dipayan</h1>
@@ -21,17 +22,28 @@
     <div class="right">
       <input hidden type="checkbox" name="nav" id="nav">
 
-      <label for="nav" class="navigaton" ><i name="nav" class="fa-solid fa-bars r-h" style="color: #183153;"></i></label>
+      <label for="nav" class="navigaton"><i name="nav" class="fa-solid fa-bars r-h" style="color: #183153;"></i></label>
       <ul>
-        <li><a href="#home"><i class="fa-solid fa-house" style="color: #ffffff;"></i> Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#contract">Contract</a></li>
-        <div>
-          <a href="#"><i class="fa-solid fa-right-to-bracket" style="color: #ffffff;"></i> Login</a>
+        <li id="li"><a href="#home"><i class="fa-solid fa-house" style="color: #ffffff;"></i> Home</a></li>
+        <li id="li"><a href="#">Services</a></li>
+        <li id="li"><a href="#contract">Contract</a></li>
+        <div class="loginx">
+          <label style="cursor: pointer;" for="login"><i class="fa-solid fa-right-to-bracket"
+              style="color: #ffffff;"></i> Login</label>
         </div>
       </ul>
     </div>
   </nav>
+  <input type="checkbox" hidden checked name="login" id="login">
+  <div class="backdropfilter">
+
+    <div class="login-form">
+      <div class="topbar"><label for="login">Cancel</label></div>
+
+    </div>
+  </div>
+  </div>
+
   <section id="home">
     <div class="left">
       <div class="image">
@@ -48,16 +60,20 @@
         </div>
         <div class="follow">
           <h2>Follow Me On ------- </h2>
-          <div><div class="facebook">
-            <div class="popup">
-              Facebook
+          <div>
+            <div class="facebook">
+              <div class="popup">
+                Facebook
+              </div>
+              <i class="fa-brands fa-facebook" style="color: #005eff;"></i>
             </div>
-            <i class="fa-brands fa-facebook" style="color: #005eff;"></i></div>
-          <div class="insta">
-            <div class="popup">
-              Instagram
-            </div><i class="fa-brands fa-instagram" style="color: #ff0095;"></i></div>
-        </div></div>
+            <div class="insta">
+              <div class="popup">
+                Instagram
+              </div><i class="fa-brands fa-instagram" style="color: #ff0095;"></i>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -83,15 +99,21 @@
       </form>
     </div>
   </section>
+  <div class="footer">
+    © 2023 DIPU INC. <br>
+    Personal Plotfillo website
+  </div>
 </body>
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script>
   var typed = new Typed('#element', {
-    strings: ['Coder','Web Devoloper','Pogramer'],
+    strings: ['Coder', 'Web Devoloper', 'Pogramer'],
     typeSpeed: 10,
     loop: true,
     backSpeed: 10,
   });
+</script>
+<script>
 </script>
 
 </html>
