@@ -210,8 +210,10 @@ nav ul .loginx {
     cursor: text;
 }
 
-.input-text #input-1:focus~label,
-.input-text #input-2:focus~label {
+.input-text #input-1:focus ~label,
+.input-text #input-2:focus ~label,
+.input-text #input-1:valid ~label,
+.input-text #input-2:valid ~label  {
     top: -13px;
     background-color: rgb(255, 255, 255) !important;
 }
